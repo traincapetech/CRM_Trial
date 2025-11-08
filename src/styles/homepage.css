@@ -1,0 +1,263 @@
+/* Homepage Styles */
+
+.gradient-bg {
+  @apply bg-primary;
+}
+
+
+.gradient-card {
+  background: linear-gradient(145deg, #f8fafc, #e2e8f0);
+}
+
+.dark-gradient-card {
+  background: linear-gradient(145deg, #1e293b, #334155);
+}
+
+/* Glassmorphism */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Floating Animation */
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-animation:nth-child(2n) {
+  animation-delay: 2s;
+}
+
+.floating-animation:nth-child(3n) {
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Hover Effects */
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Neon Border */
+.neon-border {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+/* Pulse Animation */
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+/* Text Gradient */
+.text-gradient {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Feature Icons */
+.feature-icon {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Stats Card */
+.stats-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.stats-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: #667eea;
+}
+
+/* Container Alignment Fixes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 640px) {
+  .stats-card {
+    min-height: auto;
+    padding: 1rem;
+  }
+  
+  .gradient-bg {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .glassmorphism {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Tablet Responsive Fixes */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .stats-card {
+    padding: 1.5rem;
+  }
+  
+  .gradient-bg {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* Desktop Responsive Fixes */
+@media (min-width: 1024px) {
+  .stats-card {
+    padding: 2rem;
+  }
+  
+  .gradient-bg {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* Ensure proper touch targets on mobile */
+@media (max-width: 640px) {
+  button, a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Large Desktop Optimizations */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1400px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+/* Navigation Item Hover Effect */
+.nav-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.nav-item:hover::before {
+  left: 100%;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .gradient-card {
+    background: linear-gradient(145deg, #1e293b, #334155);
+  }
+
+  .stats-card {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-color: #334155;
+  }
+
+  .stats-card:hover {
+    border-color: #667eea;
+  }
+}
+/* Force white text inside stats cards in dark mode */
+@media (prefers-color-scheme: dark) {
+  .stats-card {
+    color: #ffffff !important;
+  }
+
+  .stats-card h3,
+  .stats-card p,
+  .stats-card span {
+    color: #ffffff !important;
+  }
+}
+
+/* 🌙 Default: make text white in dark mode */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark p,
+.dark span,
+.dark a,
+.dark li,
+.dark label,
+.dark div {
+  color: #ffffff !important;
+}
+
+/* 🔒 Force BLACK text inside stats cards in dark mode — keep icon colors */
+.dark .force-dark-text-black,
+.dark .force-dark-text-black *:not(svg) {
+  color: #0f172a !important; /* slate-900 / black-ish */
+}
+
+/* (optional) make the card background light in dark mode so black text reads well */
+.dark .force-dark-text-black {
+  background-color: #f8fafc !important; /* slate-50 */
+}

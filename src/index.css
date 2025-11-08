@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force text visibility in dark mode */
+.dark {
+  color-scheme: dark;
+}
+
+.dark * {
+  border-color: rgb(71 85 105) !important; /* slate-600 */
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: rgb(51 65 85) !important; /* slate-700 */
+  color: rgb(248 250 252) !important; /* slate-50 */
+  border-color: rgb(71 85 105) !important; /* slate-600 */
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: rgb(148 163 184) !important; /* slate-400 */
+}
+
+/* Force text colors in dark mode */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: rgb(248 250 252) !important; /* slate-50 */
+}
+
+.dark p,
+.dark span,
+.dark div,
+.dark label,
+.dark li {
+  color: rgb(203 213 225) !important; /* slate-300 */
+}
+
+.dark a {
+  color: rgb(96 165 250) !important; /* blue-400 */
+}
+
+.dark a:hover {
+  color: rgb(147 197 253) !important; /* blue-300 */
+}
+
+/* Force background colors */
+.dark .bg-white {
+  background-color: rgb(15 23 42) !important; /* slate-900 */
+}
+
+.dark .bg-gray-50 {
+  background-color: rgb(30 41 59) !important; /* slate-800 */
+}
+
+.dark .bg-gray-100 {
+  background-color: rgb(51 65 85) !important; /* slate-700 */
+}
+
+/* Force card styling */
+.dark [class*="bg-white"] {
+  background-color: rgb(15 23 42) !important; /* slate-900 */
+  border-color: rgb(71 85 105) !important; /* slate-600 */
+}
+
+/* Force button text visibility */
+.dark button {
+  color: rgb(248 250 252) !important; /* slate-50 */
+}
+
+.dark button:not(.bg-blue-600):not(.bg-green-600):not(.bg-red-600):not(.bg-purple-600) {
+  background-color: rgb(51 65 85) !important; /* slate-700 */
+  border-color: rgb(71 85 105) !important; /* slate-600 */
+}
+
+/* Force table text visibility */
+.dark table,
+.dark th,
+.dark td {
+  color: rgb(203 213 225) !important; /* slate-300 */
+  border-color: rgb(71 85 105) !important; /* slate-600 */
+}
+
+.dark th {
+  background-color: rgb(30 41 59) !important; /* slate-800 */
+  color: rgb(248 250 252) !important; /* slate-50 */
+}
+
+/* Force form styling */
+.dark .form-control,
+.dark .form-input,
+.dark input[type="text"],
+.dark input[type="email"],
+.dark input[type="password"],
+.dark input[type="number"],
+.dark input[type="tel"],
+.dark input[type="url"],
+.dark input[type="search"],
+.dark input[type="date"],
+.dark input[type="datetime-local"],
+.dark input[type="month"],
+.dark input[type="week"],
+.dark input[type="time"] {
+  background-color: rgb(51 65 85) !important; /* slate-700 */
+  color: rgb(248 250 252) !important; /* slate-50 */
+  border-color: rgb(71 85 105) !important; /* slate-600 */
+}
+
+/* Force select styling */
+.dark select {
+  background-color: rgb(51 65 85) !important; /* slate-700 */
+  color: rgb(248 250 252) !important; /* slate-50 */
+  border-color: rgb(71 85 105) !important; /* slate-600 */
+}
+
+/* Force checkbox and radio styling */
+.dark input[type="checkbox"],
+.dark input[type="radio"] {
+  background-color: rgb(51 65 85) !important; /* slate-700 */
+  border-color: rgb(71 85 105) !important; /* slate-600 */
+}
+
+/* Force modal and dropdown styling */
+.dark .modal,
+.dark .dropdown-menu {
+  background-color: rgb(15 23 42) !important; /* slate-900 */
+  border-color: rgb(71 85 105) !important; /* slate-600 */
+  color: rgb(203 213 225) !important; /* slate-300 */
+}
+
+/* Force alert styling */
+.dark .alert {
+  border-color: rgb(71 85 105) !important; /* slate-600 */
+}
+
+.dark .alert-info {
+  background-color: rgb(30 58 138) !important; /* blue-800 */
+  color: rgb(219 234 254) !important; /* blue-100 */
+}
+
+.dark .alert-success {
+  background-color: rgb(22 101 52) !important; /* green-800 */
+  color: rgb(220 252 231) !important; /* green-100 */
+}
+
+.dark .alert-warning {
+  background-color: rgb(146 64 14) !important; /* amber-800 */
+  color: rgb(254 243 199) !important; /* amber-100 */
+}
+
+.dark .alert-error,
+.dark .alert-danger {
+  background-color: rgb(153 27 27) !important; /* red-800 */
+  color: rgb(254 226 226) !important; /* red-100 */
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
