@@ -153,7 +153,7 @@ class NotificationService {
     
     // Determine server URL based on environment
     const isDevelopment = import.meta.env.DEV && import.meta.env.MODE !== 'production';
-    const apiUrl = isDevelopment ? 'http://localhost:8080/api' : (import.meta.env?.VITE_API_URL || 'https://crm-backend-o36v.onrender.com/api');
+    const apiUrl = isDevelopment ? 'http://localhost:8080/api' : (import.meta.env?.VITE_API_URL || 'https://crm-trial-backend.onrender.com/api');
     const serverUrl = apiUrl.replace('/api', ''); // Remove /api for socket connection
 
     console.log('🔔 Connecting to notification server:', serverUrl);

@@ -3,7 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import axios from 'axios';
 
 // API configuration - always use production URL
-const API_BASE_URL = 'https://crm-backend-o36v.onrender.com/api';
+const API_BASE_URL = 'https://crm-trial-backend.onrender.com/api';
 
 const useActivityTracker = () => {
   const { user, token } = useAuth();

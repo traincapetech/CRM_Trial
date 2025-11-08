@@ -33,7 +33,7 @@ const ChatDebug = () => {
   const testConnection = async () => {
     try {
       const isDevelopment = import.meta.env.DEV && import.meta.env.MODE !== 'production';
-      const serverUrl = isDevelopment ? 'http://localhost:8080' : 'https://crm-backend-o36v.onrender.com';
+      const serverUrl = isDevelopment ? 'http://localhost:8080' : 'https://crm-trial-backend.onrender.com';
       const response = await fetch(`${serverUrl}/api/chat/users`, {
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -115,7 +115,7 @@ const ChatDebug = () => {
       </div>
       
       <div style={{ marginBottom: '12px' }}>
-        <strong>Server URL:</strong> {import.meta.env.DEV && import.meta.env.MODE !== 'production' ? 'http://localhost:8080' : 'https://crm-backend-o36v.onrender.com'}
+        <strong>Server URL:</strong> {import.meta.env.DEV && import.meta.env.MODE !== 'production' ? 'http://localhost:8080' : 'https://crm-trial-backend.onrender.com'}
       </div>
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>

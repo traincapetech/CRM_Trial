@@ -40,7 +40,7 @@ export const ChatProvider = ({ children }) => {
   useEffect(() => {
     if (user && token) {
       // Always use production URL
-      const apiUrl = 'https://crm-backend-o36v.onrender.com/api';
+      const apiUrl = 'https://crm-trial-backend.onrender.com/api';
       const serverUrl = apiUrl.replace('/api', ''); // Remove /api for socket connection
       console.log('🔌 Connecting to chat server:', serverUrl);
       console.log('👤 User:', user.fullName, 'Role:', user.role);
@@ -366,7 +366,7 @@ export const ChatProvider = ({ children }) => {
   const fetchChatRooms = async () => {
     try {
       const isDevelopment = import.meta.env.DEV && import.meta.env.MODE !== 'production';
-      const apiUrl = isDevelopment ? 'http://localhost:8080/api' : 'https://crm-backend-o36v.onrender.com/api';
+      const apiUrl = isDevelopment ? 'http://localhost:8080/api' : 'https://crm-trial-backend.onrender.com/api';
       const response = await fetch(`${apiUrl}/chat/rooms`, {
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -396,7 +396,7 @@ export const ChatProvider = ({ children }) => {
   const fetchMessages = async (roomId) => {
     try {
       const isDevelopment = import.meta.env.DEV && import.meta.env.MODE !== 'production';
-      const apiUrl = isDevelopment ? 'http://localhost:8080/api' : 'https://crm-backend-o36v.onrender.com/api';
+      const apiUrl = isDevelopment ? 'http://localhost:8080/api' : 'https://crm-trial-backend.onrender.com/api';
       const response = await fetch(`${apiUrl}/chat/messages/${roomId}`, {
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -427,7 +427,7 @@ export const ChatProvider = ({ children }) => {
   const fetchAllUsers = async () => {
     try {
       const isDevelopment = import.meta.env.DEV && import.meta.env.MODE !== 'production';
-      const apiUrl = isDevelopment ? 'http://localhost:8080/api' : 'https://crm-backend-o36v.onrender.com/api';
+      const apiUrl = isDevelopment ? 'http://localhost:8080/api' : 'https://crm-trial-backend.onrender.com/api';
       const response = await fetch(`${apiUrl}/chat/users`, {
         headers: {
           'Authorization': `Bearer ${token}`,

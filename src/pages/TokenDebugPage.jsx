@@ -20,7 +20,7 @@ const TokenDebugPage = () => {
     setLoading(true);
     try {
       const isDevelopment = import.meta.env.DEV && import.meta.env.MODE !== 'production';
-      const apiUrl = isDevelopment ? 'http://localhost:8080' : 'https://crm-backend-o36v.onrender.com/api';
+      const apiUrl = isDevelopment ? 'http://localhost:8080' : 'https://crm-trial-backend.onrender.com/api';
       const response = await axios.get(`${apiUrl}${isDevelopment ? '/api' : ''}/auth/debug`, {
         headers: {
           Authorization: `Bearer ${token}`

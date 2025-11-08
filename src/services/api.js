@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // API URL configuration
 const API_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://crm-backend-o36v.onrender.com/api'
+  ? 'https://crm-trial-backend.onrender.com/api'
   : 'http://localhost:8080/api';
 
 // Create axios instance

@@ -65,7 +65,7 @@ const ManagerDashboard = () => {
       
       // Also fetch leads count
       const isDevelopment = import.meta.env.DEV && import.meta.env.MODE !== 'production';
-      const apiUrl = isDevelopment ? 'http://localhost:8080' : 'https://crm-backend-o36v.onrender.com/api';
+      const apiUrl = isDevelopment ? 'http://localhost:8080' : 'https://crm-trial-backend.onrender.com/api';
       const leadsResponse = await axios.get(`${apiUrl}${isDevelopment ? '/api' : ''}/leads`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,

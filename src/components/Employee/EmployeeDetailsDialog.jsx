@@ -58,7 +58,7 @@ const EmployeeDetailsDialog = ({ employeeId, isOpen, onOpenChange }) => {
       const isDevelopment = import.meta.env.DEV && import.meta.env.MODE !== 'production';
       const baseUrl = isDevelopment 
         ? 'http://localhost:8080/api' 
-        : (import.meta.env.VITE_API_URL || 'https://crm-backend-o36v.onrender.com/api');
+        : (import.meta.env.VITE_API_URL || 'https://crm-trial-backend.onrender.com/api');
       const fileUrl = `${baseUrl}/employees/documents/${documentPath}`;
       const token = localStorage.getItem('token');
       
@@ -113,7 +113,7 @@ const EmployeeDetailsDialog = ({ employeeId, isOpen, onOpenChange }) => {
       const isDevelopment = import.meta.env.DEV && import.meta.env.MODE !== 'production';
       const baseUrl = isDevelopment 
         ? 'http://localhost:8080/api' 
-        : (import.meta.env.VITE_API_URL || 'https://crm-backend-o36v.onrender.com/api');
+        : (import.meta.env.VITE_API_URL || 'https://crm-trial-backend.onrender.com/api');
       const fileUrl = `${baseUrl}/employees/documents/${documentPath}`;
       const token = localStorage.getItem('token');
       
